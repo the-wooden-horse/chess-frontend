@@ -11,7 +11,10 @@ class Block extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => onTap(Cordinates.fromIndex(index)),
+      onTap: () {
+        log("message: coordinates: ${Cordinates.fromIndex(index)} from index $index");
+        onTap(Cordinates.fromIndex(index));
+      },
       child: Container(
         height: 30,
         width: 30,

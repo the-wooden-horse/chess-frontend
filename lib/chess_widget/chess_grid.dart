@@ -14,6 +14,7 @@ class ChessGrid extends StatelessWidget {
     return GridView.count(
         crossAxisCount: 8,
         crossAxisSpacing: 0,
+        physics: const NeverScrollableScrollPhysics(),
         children: List.generate(64, (index) {
           return Block(index, onTap: onBlockTap);
         }));

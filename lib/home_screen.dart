@@ -10,9 +10,12 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 0,
+      ),
       body: SizedBox.square(
         dimension: (width < 400) ? width : 400,
-        child: const ChessFlow(),
+        child: ChessFlow(),
       ),
     );
   }
