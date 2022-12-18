@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: SizedBox.square(
         dimension: (width < 400) ? width : 400,
-        child: ChessFlow(),
+        child: const ChessFlow(),
       ),
     );
   }

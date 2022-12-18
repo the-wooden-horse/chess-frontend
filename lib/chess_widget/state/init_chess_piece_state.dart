@@ -1,4 +1,10 @@
+import 'package:chess/chess_piece/bishop.dart';
 import 'package:chess/chess_piece/chess_piece_object.dart';
+import 'package:chess/chess_piece/king.dart';
+import 'package:chess/chess_piece/knight.dart';
+import 'package:chess/chess_piece/pawn.dart';
+import 'package:chess/chess_piece/queen.dart';
+import 'package:chess/chess_piece/rook.dart';
 import 'package:chess/constants/chess_piece_type.dart';
 
 import '../position_handlers/cordinates.dart';
@@ -6,38 +12,38 @@ import '../position_handlers/cordinates.dart';
 abstract class ChessPieceInitState {
   static List<ChessPieceObject> getInitialChessPieceObjects() {
     return [
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.rookA1, cordinates: Cordinates.fromIndex(0)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.knightA1, cordinates: Cordinates.fromIndex(1)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.bishopA1, cordinates: Cordinates.fromIndex(2)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.queenA, cordinates: Cordinates.fromIndex(3)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.kingA, cordinates: Cordinates.fromIndex(4)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.bishopA2, cordinates: Cordinates.fromIndex(5)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.knightA2, cordinates: Cordinates.fromIndex(6)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.rookA2, cordinates: Cordinates.fromIndex(7)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnA1, cordinates: Cordinates.fromIndex(8)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnA2, cordinates: Cordinates.fromIndex(9)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnA3, cordinates: Cordinates.fromIndex(10)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnA4, cordinates: Cordinates.fromIndex(11)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnA5, cordinates: Cordinates.fromIndex(12)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnA6, cordinates: Cordinates.fromIndex(13)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnA7, cordinates: Cordinates.fromIndex(14)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnA8, cordinates: Cordinates.fromIndex(15)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnB1, cordinates: Cordinates.fromIndex(48)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnB2, cordinates: Cordinates.fromIndex(49)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnB3, cordinates: Cordinates.fromIndex(50)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnB4, cordinates: Cordinates.fromIndex(51)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnB5, cordinates: Cordinates.fromIndex(52)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnB6, cordinates: Cordinates.fromIndex(53)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnB7, cordinates: Cordinates.fromIndex(54)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.pawnB8, cordinates: Cordinates.fromIndex(55)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.rookB1, cordinates: Cordinates.fromIndex(56)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.knightB1, cordinates: Cordinates.fromIndex(57)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.bishopB1, cordinates: Cordinates.fromIndex(58)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.queenB, cordinates: Cordinates.fromIndex(59)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.kingB, cordinates: Cordinates.fromIndex(60)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.bishopB2, cordinates: Cordinates.fromIndex(61)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.knightB2, cordinates: Cordinates.fromIndex(62)),
-      ChessPieceObject(chessPieceEnum: ChessPieceEnum.rookB2, cordinates: Cordinates.fromIndex(63)),
+      Rook(chessPieceEnum: ChessPieceEnum.rookA1, cordinate: Cordinate.fromIndex(0)),
+      Knight(chessPieceEnum: ChessPieceEnum.knightA1, cordinate: Cordinate.fromIndex(1)),
+      Bishop(chessPieceEnum: ChessPieceEnum.bishopA1, cordinate: Cordinate.fromIndex(2)),
+      Queen(chessPieceEnum: ChessPieceEnum.queenA, cordinate: Cordinate.fromIndex(3)),
+      King(chessPieceEnum: ChessPieceEnum.kingA, cordinate: Cordinate.fromIndex(4)),
+      Bishop(chessPieceEnum: ChessPieceEnum.bishopA2, cordinate: Cordinate.fromIndex(5)),
+      Knight(chessPieceEnum: ChessPieceEnum.knightA2, cordinate: Cordinate.fromIndex(6)),
+      Rook(chessPieceEnum: ChessPieceEnum.rookA2, cordinate: Cordinate.fromIndex(7)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnA1, cordinate: Cordinate.fromIndex(8)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnA2, cordinate: Cordinate.fromIndex(9)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnA3, cordinate: Cordinate.fromIndex(10)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnA4, cordinate: Cordinate.fromIndex(11)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnA5, cordinate: Cordinate.fromIndex(12)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnA6, cordinate: Cordinate.fromIndex(13)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnA7, cordinate: Cordinate.fromIndex(14)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnA8, cordinate: Cordinate.fromIndex(15)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnB1, cordinate: Cordinate.fromIndex(48)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnB2, cordinate: Cordinate.fromIndex(49)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnB3, cordinate: Cordinate.fromIndex(50)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnB4, cordinate: Cordinate.fromIndex(51)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnB5, cordinate: Cordinate.fromIndex(52)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnB6, cordinate: Cordinate.fromIndex(53)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnB7, cordinate: Cordinate.fromIndex(54)),
+      Pawn(chessPieceEnum: ChessPieceEnum.pawnB8, cordinate: Cordinate.fromIndex(55)),
+      Rook(chessPieceEnum: ChessPieceEnum.rookB1, cordinate: Cordinate.fromIndex(56)),
+      Knight(chessPieceEnum: ChessPieceEnum.knightB1, cordinate: Cordinate.fromIndex(57)),
+      Bishop(chessPieceEnum: ChessPieceEnum.bishopB1, cordinate: Cordinate.fromIndex(58)),
+      Queen(chessPieceEnum: ChessPieceEnum.queenB, cordinate: Cordinate.fromIndex(59)),
+      King(chessPieceEnum: ChessPieceEnum.kingB, cordinate: Cordinate.fromIndex(60)),
+      Bishop(chessPieceEnum: ChessPieceEnum.bishopB2, cordinate: Cordinate.fromIndex(61)),
+      Knight(chessPieceEnum: ChessPieceEnum.knightB2, cordinate: Cordinate.fromIndex(62)),
+      Rook(chessPieceEnum: ChessPieceEnum.rookB2, cordinate: Cordinate.fromIndex(63)),
     ];
   }
 }

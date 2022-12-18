@@ -1,13 +1,9 @@
 import 'dart:developer';
 
-import 'package:chess/chess_piece/chess_piece_widget.dart';
 import 'package:chess/chess_widget/chess_flow_delegate.dart';
 import 'package:chess/chess_widget/chess_grid.dart';
-import 'package:chess/chess_widget/position_handlers/cordinates.dart';
-import 'package:chess/chess_widget/state/chess_board_state.dart';
 import 'package:chess/chess_widget/state/init_widget_state.dart';
 import 'package:chess/chess_widget/state/mock_chess_board_state.dart';
-import 'package:chess/constants/chess_piece_type.dart';
 import 'package:flutter/material.dart';
 
 class ChessFlow extends StatefulWidget {
@@ -28,6 +24,7 @@ class _ChessFlowState extends State<ChessFlow> {
             state.moveOrSelect(p0);
           });
         },
+        highlightedCordinates: state.highlightedCordinates,
       ),
       ...ChessInitialWidgets.getInitialWidgetsFromAssets()
           .map((e) => GestureDetector(

@@ -1,22 +1,16 @@
 import 'package:chess/chess_widget/position_handlers/cordinates.dart';
+import 'package:chess/chess_widget/state/chess_board_state.dart';
 import 'package:chess/constants/chess_piece_type.dart';
 
 class ChessPieceObject {
   final ChessPieceEnum chessPieceEnum;
-  final Cordinates cordinates;
+  Cordinate cordinate;
 
   ChessPieceObject({
     required this.chessPieceEnum,
-    required this.cordinates,
+    required this.cordinate,
   });
 
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is ChessPieceObject && other.chessPieceEnum == chessPieceEnum && other.cordinates == cordinates;
-  }
-
-  @override
-  int get hashCode => chessPieceEnum.hashCode ^ cordinates.hashCode;
+  List<Cordinate> highlightCordinates(ChessBoardState boardState) => [cordinate];
+  List<Cordinate> highlightAttackCordinates(ChessBoardState boardState) => [cordinate];
 }

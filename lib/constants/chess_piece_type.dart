@@ -10,6 +10,7 @@ enum ChessPieceType {
 
 enum ChessPieceEnumUniqueType { king, queen, rook, bishop, knight, pawn }
 
+// Render key should be unique for each enum value
 enum ChessPieceEnum {
   kingA(1, ChessPieceType.A, ChessPieceEnumUniqueType.king),
   kingB(2, ChessPieceType.B, ChessPieceEnumUniqueType.king),
@@ -44,11 +45,11 @@ enum ChessPieceEnum {
   pawnB7(31, ChessPieceType.B, ChessPieceEnumUniqueType.pawn),
   pawnB8(32, ChessPieceType.B, ChessPieceEnumUniqueType.pawn);
 
-  final int key;
+  final int renderKey;
   final ChessPieceType type;
   final ChessPieceEnumUniqueType uniqueType;
   const ChessPieceEnum(
-    this.key,
+    this.renderKey,
     this.type,
     this.uniqueType,
   );
